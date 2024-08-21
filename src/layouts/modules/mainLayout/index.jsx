@@ -9,7 +9,7 @@ const MainLayout = () => {
 			<Grid item xs={6} md={1.75} className='menu'>
 				<Menu />
 			</Grid>
-			<Grid item xs={6} md={7.75} sx={{ background: 'blue' }}>
+			<Grid item xs={6} md={7.75} className='main'>
 				<Outlet />
 			</Grid>
 			<Grid item xs={6} md={2.5} sx={{ background: 'yellow' }}>
