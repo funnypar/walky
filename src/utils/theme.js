@@ -4,12 +4,17 @@ const theme = createTheme({
 	palette: {
 		background: {
 			white: '#FFFFFF',
+			darkWhite: '#FAFAFA',
+			semiWhite: '#F5F5F7',
 			lightWhite: '#FFFFFF14',
 			lightGray: '#F5F5F7',
 			darkBlue: '#141522',
+			pink: '#FF4D5E',
 		},
 		text: {
 			lightWhite: '#8E92BC',
+			darkBlue: '#141522',
+			lightBlue: '#54577A',
 		},
 	},
 	// breakpoints: {
