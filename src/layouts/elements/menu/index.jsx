@@ -11,7 +11,9 @@ import StackRoot from './style.module';
 const Menu = () => {
 	return (
 		<StackRoot>
-			‌<Box>Logo</Box>
+			<Box>
+				<img src='/images/logo.png' alt='logo' className='img' />
+			</Box>
 			<List>
 				<MenuItem icon={<RxDashboard />} title={'Overview'} />
 				<MenuItem icon={<FaTasks />} title={'Task'} />
