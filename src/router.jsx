@@ -1,10 +1,16 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
+import MainLayout from './layouts/modules/mainLayout';
 import Dashboard from './pages/dashboard';
 
 export const routes = [
 	{
-		path: '/dashboard',
-		element: <Dashboard />,
+		element: <MainLayout />,
+		children: [
+			{
+				path: '/dashboard',
+				element: <Dashboard />,
+			},
+		],
 	},
 	// {
 	// 	key: 'authentication',

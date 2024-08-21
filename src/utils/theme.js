@@ -1,14 +1,13 @@
 import { createTheme } from '@mui/material';
 
 const theme = createTheme({
-	// palette: {
-	// 	primary: {
-	// 		main: purple[500],
-	// 	},
-	// 	secondary: {
-	// 		main: green[500],
-	// 	},
-	// },
+	palette: {
+		background: {
+			white: '#FFFFFF',
+			lightWhite: '#FFFFFF14',
+			darkBlue: '#141522',
+		},
+	},
 	// breakpoints: {
 	// 	values: {
 	// 		xs: 0,
