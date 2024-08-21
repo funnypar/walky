@@ -5,7 +5,11 @@ const theme = createTheme({
 		background: {
 			white: '#FFFFFF',
 			lightWhite: '#FFFFFF14',
+			lightGray: '#F5F5F7',
 			darkBlue: '#141522',
+		},
+		text: {
+			lightWhite: '#8E92BC',
 		},
 	},
 	// breakpoints: {
