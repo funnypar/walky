@@ -27,7 +27,11 @@ const Info = () => {
 					</SvgIcon>
 				</Box>
 				<Stack direction='row' spacing={2} className='icon'>
-					<Avatar alt='Remy Sharp' src='/images/user.jpg' sx={{ height: '52px', width: '52px' }} />
+					<Avatar
+						alt='Remy Sharp'
+						src='/images/users/user.jpg'
+						sx={{ height: '52px', width: '52px' }}
+					/>
 				</Stack>
 			</Box>
 		</Box>
