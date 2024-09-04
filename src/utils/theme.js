@@ -5,7 +5,6 @@ const theme = createTheme({
 		background: {
 			white: '#FFFFFF',
 			darkWhite: '#FAFAFA',
-			semiWhite: '#F5F5F7',
 			lightWhite: '#FFFFFF14',
 			lightGray: '#F5F5F7',
 			darkBlue: '#141522',
@@ -16,7 +15,11 @@ const theme = createTheme({
 			lightWhite: '#8E92BC',
 			darkBlue: '#141522',
 			lightBlue: '#54577A',
+			purpleDark: '#546FFF',
 		},
+	},
+	typography: {
+		fontFamily: 'Plus Jakarta Sans, sans-serif',
 	},
 	// breakpoints: {
 	// 	values: {
