@@ -2,7 +2,7 @@ import { Box, styled } from '@mui/material';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export default styled(Box)(({ theme }) => ({
-	padding: '2rem',
+	padding: '1.5rem',
 	fontFamily: theme.typography,
 	'& .icon': {
 		background: theme.palette.background.lightGray,
