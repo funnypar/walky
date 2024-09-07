@@ -2,8 +2,9 @@ import { Box, styled } from '@mui/material';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export default styled(Box)(({ theme }) => ({
-	padding: '1.5rem',
+	padding: '1rem',
 	fontFamily: theme.typography,
+	overflow: 'scroll',
 	'& .icon': {
 		background: theme.palette.background.lightGray,
 		height: '52px',
