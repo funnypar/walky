@@ -1,11 +1,21 @@
 import { useTheme } from '@emotion/react';
 import { Box, FormControl, MenuItem, Select, Typography } from '@mui/material';
 import { IoIosArrowDown } from 'react-icons/io';
+import { CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 import CircularProgressWithLabel from '../../../../layouts/elements/circleProgress';
 import BoxRoot from './style.module';
 
 const Statistic = () => {
 	const theme = useTheme();
+	const data = [
+		{ name: 'S', Task: 1 },
+		{ name: 'M', Task: 2 },
+		{ name: 'T', Task: 1 },
+		{ name: 'W', Task: 2.9 },
+		{ name: 'T', Task: 1.5 },
+		{ name: 'F', Task: 2 },
+		{ name: 'S', Task: 1.75 },
+	];
 
 	return (
 		<BoxRoot>
@@ -55,30 +65,52 @@ const Statistic = () => {
 						</Select>
 					</FormControl>
 				</Box>
-				{/* <LineChart
-						xAxis={[
-							{
-								type: 'category',
-								data: data.map(item => item.x),
-							},
-						]}
-						series={[
-							{
-								data: data.map(item => item.y),
-								type: 'line',
-							},
-						]}
-						width={500}
-						height={300}
-						tooltip={{
-							trigger: 'item',
-							formatter: params => `${params.data.x}: ${params.data.y} Task`,
+				<LineChart
+					width={600}
+					height={130}
+					data={data}
+					style={{
+						fontFamily: theme.typography,
+					}}
+					margin={{ top: 5, right: 5, bottom: 5, left: -30 }}
+				>
+					<Line
+						type='monotone'
+						dataKey='Task'
+						stroke={theme.palette.background.darkBlue}
+						strokeWidth={3}
+						activeDot={{
+							stroke: theme.palette.background.purpleDark,
+
+							fill: 'white',
+							strokeWidth: 4,
+							r: 7,
 						}}
-						highlight={{
-							data: [{ x: 'T', y: 2 }],
-							style: { stroke: 'blue', strokeWidth: 2 },
+					/>
+					<CartesianGrid
+						stroke={theme.palette.background.lightBlue}
+						strokeDasharray='85 5'
+						horizontal={false}
+					/>
+					<XAxis dataKey='name' />
+					<YAxis />
+					<Tooltip
+						contentStyle={{
+							color: 'white',
+							fontFamily: theme.typography.fontFamily,
+							background: 'black',
+							flexDirection: 'row-reverse',
 						}}
-					/> */}
+						itemStyle={{
+							color: 'white',
+							fontFamily: theme.typography.fontFamily,
+							background: 'black',
+						}}
+						labelStyle={{ display: 'none' }}
+						formatter={(value, name) => `${value} ${name}`}
+						defaultValue=''
+					/>
+				</LineChart>
 			</Box>
 		</BoxRoot>
 	);
