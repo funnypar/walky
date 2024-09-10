@@ -20,8 +20,6 @@ const Details = () => {
 	const theme = useTheme();
 	return (
 		<BoxRoot>
-			<Box sx={{ height: '160px', background: 'white', borderRadius: '10px' }}>Date</Box>
-
 			<Card className='card'>
 				<CardContent sx={{ padding: 0, display: 'flex', justifyContent: 'space-between' }}>
 					<Typography sx={{ fontSize: '14px', fontWeight: 600 }}>Task Today</Typography>
