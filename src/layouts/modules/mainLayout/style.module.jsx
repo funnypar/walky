@@ -15,4 +15,8 @@ export default styled(Grid)(({ theme }) => ({
 		background: theme.palette.background.darkWhite,
 		padding: 6,
 	},
+	'& .details': {
+		background: theme.palette.background.lightGray,
+		padding: '1rem',
+	},
 }));
