@@ -1,6 +1,7 @@
 import { Grid } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import Menu from '../../elements/menu/index';
+import Details from '../details';
 import GridRoot from './style.module';
 
 const MainLayout = () => {
@@ -12,8 +13,8 @@ const MainLayout = () => {
 			<Grid item xs={6} md={7.25} className='main'>
 				<Outlet />
 			</Grid>
-			<Grid item xs={6} md={3} sx={{ background: 'yellow' }}>
-				<div>xs=6 md=4</div>
+			<Grid item xs={6} md={3} className='details'>
+				<Details />
 			</Grid>
 		</GridRoot>
 	);

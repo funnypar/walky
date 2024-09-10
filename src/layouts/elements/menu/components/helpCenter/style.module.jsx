@@ -6,7 +6,7 @@ export default styled(Box)(({ theme }) => ({
 	minHeight: '248px',
 	borderRadius: '10px',
 	position: 'absolute',
-	bottom: 55,
+	bottom: 75,
 	left: '50%',
 	transform: 'translate(-50%)',
 	background: theme.palette.background.darkBlue,
