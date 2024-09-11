@@ -2,12 +2,12 @@ import { Box, styled } from '@mui/material';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export default styled(Box)(({ theme }) => ({
-	minWidth: '188px',
+	width: '188px',
 	minHeight: '248px',
 	borderRadius: '10px',
-	position: 'absolute',
-	bottom: 75,
-	left: '50%',
+	position: 'fixed',
+	bottom: 20,
+	left: 110,
 	transform: 'translate(-50%)',
 	background: theme.palette.background.darkBlue,
 	'&::before': {
