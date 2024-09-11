@@ -12,7 +12,6 @@ export default styled(Grid)(({ theme }) => ({
 		overflow: 'hidden',
 	},
 	'& .main': {
-		background: theme.palette.background.darkWhite,
 		padding: 6,
 	},
 	'& .details': {
