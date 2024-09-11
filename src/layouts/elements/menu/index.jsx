@@ -15,11 +15,11 @@ const Menu = () => {
 				<img src='/images/logo.png' alt='logo' className='img' />
 			</Box>
 			<List>
-				<MenuItem icon={<RxDashboard />} title={'Overview'} />
-				<MenuItem icon={<FaTasks />} title={'Task'} />
-				<MenuItem icon={<SiFrontendmentor />} title={'Mentors'} />
-				<MenuItem icon={<AiOutlineMessage />} title={'Message'} />
-				<MenuItem icon={<IoSettingsOutline />} title={'Settings'} />
+				<MenuItem icon={<RxDashboard />} title={'Overview'} path={'dashboard'} />
+				<MenuItem icon={<FaTasks />} title={'Task'} path={'task'} />
+				<MenuItem icon={<SiFrontendmentor />} title={'Mentors'} path={'mentors'} />
+				<MenuItem icon={<AiOutlineMessage />} title={'Message'} path={'message'} />
+				<MenuItem icon={<IoSettingsOutline />} title={'Settings'} path={'settings'} />
 			</List>
 			<HelpCenter />
 		</StackRoot>

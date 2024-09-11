@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import MainLayout from './layouts/modules/mainLayout';
 import Dashboard from './pages/dashboard';
+import Task from './pages/task';
 
 export const routes = [
 	{
@@ -9,6 +10,10 @@ export const routes = [
 			{
 				path: '/dashboard',
 				element: <Dashboard />,
+			},
+			{
+				path: '/task',
+				element: <Task />,
 			},
 		],
 	},
