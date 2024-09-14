@@ -1,7 +1,8 @@
 import { Stack, styled } from '@mui/material';
 
 // eslint-disable-next-line react-refresh/only-export-components
-export default styled(Stack)(({ theme }) => ({
+export default styled(Stack)(({ theme, sx }) => ({
+	...sx,
 	padding: 32,
 	position: 'relative',
 	background: theme.palette.background.white,

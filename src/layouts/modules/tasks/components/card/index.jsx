@@ -9,7 +9,7 @@ import {
 	Typography,
 } from '@mui/material';
 import { IoMdTime } from 'react-icons/io';
-import ProgressBar from '../../../../../../layouts/elements/progressBar';
+import ProgressBar from '../../../../elements/progressBar';
 import CardRoot from './style.module';
 
 const Card = () => {

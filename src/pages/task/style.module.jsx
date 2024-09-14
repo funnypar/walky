@@ -4,7 +4,6 @@ import { Box, styled } from '@mui/material';
 export default styled(Box)(({ theme }) => ({
 	padding: '1rem',
 	fontFamily: theme.typography,
-	overflow: 'scroll',
 	'& .icon': {
 		background: theme.palette.background.lightGray,
 		height: '52px',
