@@ -1,7 +1,7 @@
+import Tasks from '../../layouts/modules/tasks';
 import Info from './components/Info/index';
 import Mentors from './components/mentors';
 import Statistic from './components/statistic';
-import Tasks from './components/tasks';
 import BoxRoot from './style.module';
 
 const Dashboard = () => {
@@ -10,7 +10,7 @@ const Dashboard = () => {
 			<Info />
 			<Statistic />
 			<Mentors />
-			<Tasks />
+			<Tasks title={'Upcoming Task'} />
 		</BoxRoot>
 	);
 };

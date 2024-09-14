@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useTheme } from '@emotion/react';
 import { Box, MobileStepper, Paper, Slide, Typography } from '@mui/material';
 import { useState } from 'react';
@@ -5,7 +6,7 @@ import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import Card from './components/card';
 import BoxRoot from './style.module';
 
-const Tasks = () => {
+const Tasks = ({ title, sx }) => {
 	const theme = useTheme();
 
 	const slides = [
@@ -28,7 +29,7 @@ const Tasks = () => {
 	};
 
 	return (
-		<BoxRoot>
+		<BoxRoot sx={{ ...sx }}>
 			<Box className='header'>
 				<Typography
 					sx={{
@@ -38,7 +39,7 @@ const Tasks = () => {
 						fontFamily: theme.Typography,
 					}}
 				>
-					Upcoming Task
+					{title}
 				</Typography>
 				<MobileStepper
 					maxSteps={3}
