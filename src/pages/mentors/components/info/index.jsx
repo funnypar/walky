@@ -22,7 +22,7 @@ const Info = () => {
 			<Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1 }}>
 				<Box sx={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
 					<Typography sx={{ fontWeight: 600, fontSize: 24 }} color={theme.palette.text.darkBlue}>
-						Explore Task
+						Explore Mentors
 					</Typography>
 				</Box>
 				<Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
@@ -55,7 +55,7 @@ const Info = () => {
 					alignItems: 'center',
 				}}
 			>
-				<SearchBar title={'Search Tasks'} />
+				<SearchBar title={'Search Mentors'} />
 				<List sx={{ display: 'flex', gap: 2 }}>
 					<ListItem
 						sx={{
@@ -106,7 +106,7 @@ const Info = () => {
 							<CgSortAz />
 						</ListItemAvatar>
 						<ListItemText
-							secondary='Sort By : Deadline'
+							secondary='Sort By : Popular'
 							sx={{ fontSize: '12px', fontWeight: 600 }}
 						/>
 					</ListItem>

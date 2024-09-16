@@ -1,10 +1,11 @@
 import { useTheme } from '@emotion/react';
 import { Box } from '@mui/material';
-import Tasks from '../../layouts/modules/tasks';
+import Mentors from '../dashboard/components/mentors';
 import Info from './components/info';
+import AllMentors from './components/mentors';
 import BoxRoot from './style.module';
 
-const Task = () => {
+const MentorsLayout = () => {
 	const theme = useTheme();
 
 	return (
@@ -19,14 +20,13 @@ const Task = () => {
 					display: 'flex',
 					flexDirection: 'column',
 					overflow: 'scroll',
-					gap: 28,
 				}}
 			>
-				<Tasks title={'Time Limit'} />
-				<Tasks title={'New Task'} />
+				<Mentors title={'Recent Mentors'} />
+				<AllMentors />
 			</Box>
 		</BoxRoot>
 	);
 };
 
-export default Task;
+export default MentorsLayout;

@@ -9,7 +9,7 @@ const Dashboard = () => {
 		<BoxRoot style={{ height: '100%' }}>
 			<Info />
 			<Statistic />
-			<Mentors />
+			<Mentors title={'Monthly Mentors'} />
 			<Tasks title={'Upcoming Task'} />
 		</BoxRoot>
 	);

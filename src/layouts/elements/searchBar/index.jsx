@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { alpha, InputBase, styled } from '@mui/material';
 import { CiSearch } from 'react-icons/ci';
 
@@ -50,13 +51,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	},
 }));
 
-const SearchBar = () => {
+const SearchBar = ({ title }) => {
 	return (
 		<Search>
 			<SearchIconWrapper>
 				<CiSearch />
 			</SearchIconWrapper>
-			<StyledInputBase placeholder='Search Task' inputProps={{ 'aria-label': 'search' }} />
+			<StyledInputBase placeholder={title} inputProps={{ 'aria-label': 'search' }} />
 		</Search>
 	);
 };

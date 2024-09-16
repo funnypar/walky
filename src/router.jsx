@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import MainLayout from './layouts/modules/mainLayout';
 import Dashboard from './pages/dashboard';
+import Mentors from './pages/mentors';
 import Task from './pages/task';
 
 export const routes = [
@@ -14,6 +15,10 @@ export const routes = [
 			{
 				path: '/task',
 				element: <Task />,
+			},
+			{
+				path: 'mentors',
+				element: <Mentors />,
 			},
 		],
 	},
