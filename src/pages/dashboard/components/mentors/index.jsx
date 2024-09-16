@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useTheme } from '@emotion/react';
 import { Box, MobileStepper, Paper, Slide, Typography } from '@mui/material';
 import { useState } from 'react';
@@ -5,7 +6,7 @@ import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import Card from './components/cart';
 import BoxRoot from './style.module';
 
-const Mentors = () => {
+const Mentors = ({ title }) => {
 	const theme = useTheme();
 
 	const slides = [
@@ -38,7 +39,7 @@ const Mentors = () => {
 						fontFamily: theme.Typography,
 					}}
 				>
-					Monthly Mentors
+					{title}
 				</Typography>
 				<MobileStepper
 					maxSteps={3}
