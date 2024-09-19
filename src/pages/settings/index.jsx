@@ -1,8 +1,7 @@
 import { useTheme } from '@emotion/react';
 import { Box } from '@mui/material';
-import Mentors from '../dashboard/components/mentors';
-import AllMentors from './components/Allmentors';
 import Info from './components/info';
+import SettingTabs from './components/tabs/index';
 import BoxRoot from './style.module';
 
 const MentorsLayout = () => {
@@ -15,15 +14,14 @@ const MentorsLayout = () => {
 				sx={{
 					background: theme.palette.background.lightGray,
 					height: '100%',
-					paddingX: '1rem',
-					paddingBottom: '22rem',
+					padding: '1rem',
 					display: 'flex',
 					flexDirection: 'column',
-					overflow: 'scroll',
 				}}
 			>
-				<Mentors title={'Recent Mentors'} />
-				<AllMentors />
+				<Box sx={{ background: 'white', borderRadius: '10px' }}>
+					<SettingTabs />
+				</Box>
 			</Box>
 		</BoxRoot>
 	);
