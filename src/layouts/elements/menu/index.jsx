@@ -1,5 +1,4 @@
 import { Box, List } from '@mui/material';
-import { AiOutlineMessage } from 'react-icons/ai';
 import { FaTasks } from 'react-icons/fa';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { RxDashboard } from 'react-icons/rx';
@@ -18,7 +17,6 @@ const Menu = () => {
 				<MenuItem icon={<RxDashboard />} title={'Overview'} path={'dashboard'} />
 				<MenuItem icon={<FaTasks />} title={'Task'} path={'task'} />
 				<MenuItem icon={<SiFrontendmentor />} title={'Mentors'} path={'mentors'} />
-				<MenuItem icon={<AiOutlineMessage />} title={'Message'} path={'message'} />
 				<MenuItem icon={<IoSettingsOutline />} title={'Settings'} path={'settings'} />
 			</List>
 			<HelpCenter />
