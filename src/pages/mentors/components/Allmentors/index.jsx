@@ -1,10 +1,17 @@
 import { useTheme } from '@emotion/react';
 import { Box, Typography } from '@mui/material';
+import { useQuery } from '@tanstack/react-query';
+import MentorsSpinner from '../../../../layouts/elements/spinner';
+import getAllMentors from '../../../../utils/service/getAllMentors';
 import Mentor from '../mentor';
 import BoxRoot from './style.module';
 
 const AllMentors = () => {
 	const theme = useTheme();
+	const { data: mentors, isLoading } = useQuery({
+		queryFn: () => getAllMentors(),
+		queryKey: ['mentors'],
+	});
 
 	return (
 		<BoxRoot>
@@ -21,16 +28,13 @@ const AllMentors = () => {
 				</Typography>
 			</Box>
 			<Box sx={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
-				<Mentor
-					followed={true}
-					description="Hi, I'm Jessica Jane. I am a doctoral student at Harvard University majoring in Web . . ."
-				/>
-
-				<Mentor />
-				<Mentor />
-				<Mentor />
-				<Mentor />
-				<Mentor />
+				{isLoading ? (
+					<MentorsSpinner />
+				) : (
+					mentors?.map((el, index) => {
+						return <Mentor datas={el} key={index} />;
+					})
+				)}
 			</Box>
 		</BoxRoot>
 	);

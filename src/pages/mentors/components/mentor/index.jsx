@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useTheme } from '@emotion/react';
 import {
 	Avatar,
@@ -13,7 +14,7 @@ import { FaStar } from 'react-icons/fa';
 import { GoTasklist } from 'react-icons/go';
 
 // eslint-disable-next-line react/prop-types
-const Mentor = ({ followed = false, description = "Hi, i'm here :)" }) => {
+const Mentor = ({ datas }) => {
 	const theme = useTheme();
 
 	return (
@@ -26,15 +27,17 @@ const Mentor = ({ followed = false, description = "Hi, i'm here :)" }) => {
 				}}
 			>
 				<CardHeader
-					avatar={<Avatar aria-label='recipe ' src='/images/users/user1.jpg' />}
-					title='Curious George'
-					subheader='UI UX Design'
+					avatar={<Avatar aria-label='recipe ' src={datas?.image} />}
+					title={`${datas?.first_name} ${datas?.last_name}`}
+					subheader={datas?.job}
 				/>
 				<CardActions disableSpacing>
 					<IconButton
 						aria-label='follow'
 						sx={{
-							color: `${followed ? theme.palette.text.purpleDark : theme.palette.text.lightBlue}`,
+							color: `${
+								datas?.followed ? theme.palette.text.purpleDark : theme.palette.text.lightBlue
+							}`,
 							fontSize: '14px',
 							fontWeight: 500,
 							'&:hover': {
@@ -43,7 +46,7 @@ const Mentor = ({ followed = false, description = "Hi, i'm here :)" }) => {
 							fontFamily: theme.typography,
 						}}
 					>
-						{followed ? '+ Follow' : 'Followed'}
+						{datas?.followed ? '+ Follow' : 'Followed'}
 					</IconButton>
 				</CardActions>
 			</Box>
@@ -57,7 +60,7 @@ const Mentor = ({ followed = false, description = "Hi, i'm here :)" }) => {
 						paddingLeft: '24px',
 					}}
 				>
-					{description}
+					{datas?.description}
 				</Typography>
 			}
 			<CardContent sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -71,7 +74,9 @@ const Mentor = ({ followed = false, description = "Hi, i'm here :)" }) => {
 					<Typography sx={{ fontSize: '20px', textAlign: 'center' }}>
 						<GoTasklist />
 					</Typography>
-					<Typography sx={{ fontSize: '14px', fontWeight: 500 }}>40 Task</Typography>
+					<Typography sx={{ fontSize: '14px', fontWeight: 500 }}>
+						{datas?.tasks_number} Task
+					</Typography>
 				</Box>
 				<Box
 					sx={{
@@ -83,7 +88,9 @@ const Mentor = ({ followed = false, description = "Hi, i'm here :)" }) => {
 					<Typography sx={{ fontSize: '20px', textAlign: 'center', fill: 'yellow' }}>
 						<FaStar fill='gold' />
 					</Typography>
-					<Typography sx={{ fontSize: '14px', fontWeight: 500 }}>4,7 (750 Reviews)</Typography>
+					<Typography sx={{ fontSize: '14px', fontWeight: 500 }}>
+						{datas.rated} ({datas?.views} Reviews)
+					</Typography>
 				</Box>
 			</CardContent>
 		</Cart>
