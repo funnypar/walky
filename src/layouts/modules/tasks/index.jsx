@@ -1,13 +1,20 @@
 /* eslint-disable react/prop-types */
 import { useTheme } from '@emotion/react';
 import { Box, MobileStepper, Paper, Slide, Typography } from '@mui/material';
+import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
+import getAllTasks from '../../../utils/service/getAllTasks';
+import Spinner from '../../elements/spinner';
 import Card from './components/card';
 import BoxRoot from './style.module';
 
 const Tasks = ({ title, sx }) => {
 	const theme = useTheme();
+	const { data: tasks, isLoading } = useQuery({
+		queryFn: () => getAllTasks(),
+		queryKey: ['tasks'],
+	});
 
 	const slides = [
 		{ label: 'Slide 1', content: 'This is the first slide' },
@@ -78,8 +85,13 @@ const Tasks = ({ title, sx }) => {
 				<Paper elevation={0} sx={{ background: 'inherit' }}>
 					<Slide direction='left' in={true}>
 						<Box sx={{ display: 'flex', gap: '32px', borderRadius: '10px' }}>
-							<Card />
-							<Card />
+							{isLoading ? (
+								<Spinner />
+							) : (
+								tasks?.map((el, index) => {
+									return <Card datas={el} key={index} />;
+								})
+							)}
 						</Box>
 					</Slide>
 				</Paper>

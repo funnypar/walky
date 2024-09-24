@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import { useTheme } from '@emotion/react';
 import {
 	Avatar,
@@ -12,19 +14,17 @@ import { IoMdTime } from 'react-icons/io';
 import ProgressBar from '../../../../elements/progressBar';
 import CardRoot from './style.module';
 
-const Card = () => {
+const Card = ({ datas }) => {
 	const theme = useTheme();
 	return (
 		<CardRoot>
 			<CardMedia
 				sx={{ height: 140, borderRadius: '10px' }}
-				image='/images/images/image1.jpg'
+				image={datas?.image}
 				title='dashboard'
 			/>
 			<CardContent sx={{ padding: 0 }}>
-				<Typography sx={{ fontSize: '16px', fontWeight: 600 }}>
-					Creating Mobile App Design
-				</Typography>
+				<Typography sx={{ fontSize: '16px', fontWeight: 600 }}>{datas?.name}</Typography>
 				<Typography
 					sx={{
 						fontSize: '12px',
@@ -32,11 +32,11 @@ const Card = () => {
 						color: theme.palette.text.lightBlue,
 					}}
 				>
-					UI UX Design
+					{datas?.filed}
 				</Typography>
 			</CardContent>
 			<CardActions sx={{ padding: 0, display: 'flex', flexDirection: 'column', gap: 2 }}>
-				<ProgressBar value={75} />
+				<ProgressBar value={datas?.progress} />
 				<Box
 					sx={{
 						display: 'flex',
