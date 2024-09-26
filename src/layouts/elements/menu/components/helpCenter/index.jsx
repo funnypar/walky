@@ -1,6 +1,6 @@
 import { IconButton, Typography } from '@mui/material';
 import { MdQuestionMark } from 'react-icons/md';
-import CardButton from '../../../button';
+import TransitionsModal from '../../../modal';
 import BoxRoot from './style.module';
 
 const HelpCenter = () => {
@@ -23,7 +23,7 @@ const HelpCenter = () => {
 			>
 				Having Trouble in Learning. Please contact us for more questions.
 			</Typography>
-			<CardButton text='Go To Help Center' className='button' />
+			<TransitionsModal />
 		</BoxRoot>
 	);
 };

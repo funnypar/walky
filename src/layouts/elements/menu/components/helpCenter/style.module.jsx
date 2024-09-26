@@ -10,6 +10,7 @@ export default styled(Box)(({ theme }) => ({
 	left: 110,
 	transform: 'translate(-50%)',
 	background: theme.palette.background.darkBlue,
+
 	'&::before': {
 		content: '""',
 		position: 'absolute',
